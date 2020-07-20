@@ -1,0 +1,42 @@
+.under-link {
+  position: relative;
+  width: 100%;
+}
+.under-link::after {
+  content: "";
+  width: 0%;
+  height: 0.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #2749a0;
+  transition: all 0.3s ease;
+}
+.under-link:hover::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #4da6ff;
+}
+
+/*# sourceMappingURL=common.css.map */
+
+/*# sourceMappingURL=common.css.map */

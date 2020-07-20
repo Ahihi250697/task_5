@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import 'functions_responsive.scss';
+@import 'assets/variables.scss';
+
+.under-link {
+    position: relative;
+    width: 100%;
+
+    &::after {
+        content: '';
+        width: 0%;
+        height: .2rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $c-main-color;
+        transition: all .3s ease;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 1rem;
+    }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4da6ff;
+}
+
+/*# sourceMappingURL=common.css.map */
