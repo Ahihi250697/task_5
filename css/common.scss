@@ -11,7 +11,13 @@
     font-family: 'Lora', serif;
     font-family: 'Yumincho';
 ===========*/
-
+.a-link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 .under-link {
     position: relative;
     width: 100%;
@@ -47,21 +53,132 @@
         width: 100%;
     }
 }
+.cmm-button{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    outline: none;
+    text-align: left;
+    padding-left: 4rem;
+    transition: all .5s ease;
+    &::after{
+        content: '';
+        width: 4rem;
+        height: .2rem;
+        position: absolute;
+        right: -1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s ease;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        left:0;
+        top:0;
+        transition: all .3s ease;
+    }
+    @include mobile{
+        font-size: 1.4rem;
+        padding: 0 2rem;
+    }
+}
+.vision-area{
+    width: 100%;
+    max-width: 116.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 1200px){
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
 .heading{
     font-family: 'Lora', serif;
     font-size: 11rem;
     color: $c-black2;
+    @include ipadpro{
+        font-size: 8rem;
+    }
+    @include mobile{
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
     span{
         font-size: 2rem;
         color: #000;
         display: block;
+        @include mobile{
+            font-size: 1.4rem;
+        }
+    }
+    small{
+        font-size: 6rem;
+        @include mobile{
+            font-size: 2.4rem;
+        }
     }
 }
+
+.to-top-button{
+    position: fixed;
+    bottom: 50rem;
+    right: 8rem;
+    width: 6rem;
+    height: 6rem;
+    border: .2rem solid $c-black2;
+    overflow: hidden;
+    transition: all .3s ease;
+    display: none;
+    &::after, &::before{
+        content: '';
+        position: absolute;
+        transition: all .3s ease;
+    }
+    &::after{
+        width: 2rem;
+        height: 2rem;
+        border-right: .2rem solid $c-black2;
+        border-top: .2rem solid $c-black2;
+        transform: rotate(-45deg);
+        top: 45%;
+        left: 30%;
+    }
+    &::before{
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        left: -100%;
+        z-index: 1
+    }
+    &:hover{
+        background-color: $c-main-color;
+        &::after{
+            border-color: white;
+        }
+        &::before{
+            left: 150%;
+            background-color: white;
+        }
+        
+    }
+    &.active{
+        display: block;
+    }
+    @include mobile{
+        bottom: 4rem;
+        right: 1rem;
+    }
+}
+/*======
+    scrollbar
+    =======*/
+
 ::-webkit-scrollbar {
     width: 1rem;
     height: 1rem;
 }
-
 
 /* Track */
 ::-webkit-scrollbar-track {

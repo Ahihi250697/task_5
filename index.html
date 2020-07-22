@@ -21,14 +21,16 @@
 	<link href="assets/css/bootstrap-adjust.min.css" rel="stylesheet">
 	<link href="assets/plugins/slick/slick.css" rel="stylesheet">
 	<link href="assets/plugins/slick/slick-theme.css" rel="stylesheet">
-	<link href="css/common.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	
 	<!-- build:addcss -->
+	<link href="css/common.css" rel="stylesheet">
 	<link href="css/header.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
 	
 	<!-- /build:addcss -->
 	<title>Task 5</title>
-
 
 </head>
 <body>
@@ -40,11 +42,13 @@
 			</a>
 		</h1>
 		<span>recruit 0000</span>
-		<div class="header-menu">
-			<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
-			<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
-			<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
-			<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
+		<div class="header-wrap">
+			<div class="header-menu">
+				<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
+				<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
+				<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
+				<h3><a href="#link" class="a-text-none under-link">menu</a></h3>
+			</div>
 			<a class="a-text-none header-button" href="#link">mypage
 				<i class="fa fa-user" aria-hidden="true"></i>
 			</a>
@@ -60,7 +64,7 @@
 		</button>
 	<!-- /build:header -->
 	</header>
-	<main class="main-page">
+	<main id="main-page">
 	<!-- build:content -->
 	<!-- build:mv -->
 		<section class="mv mv-area">
@@ -70,9 +74,9 @@
 				<img src="images/img_mv_03.png" alt="mv-slick background">
 			</div>
 			<div class="mv-container">
-				<span>face the future with confidence</span>
-				<h2>未来に自信を持つ確信を。</h2>
-				<button class="rect-button">message</button>
+				<span class="wow animated fadeIn">face the future with confidence</span>
+				<h2 class="wow animated fadeIn" data-wow-delay=".2s">未来に自信を持つ確信を。</h2>
+				<button class="rect-button wow animated fadeIn" data-wow-delay=".4s">message</button>
 			</div>
 		</section>
 	<!-- /build:mv -->
@@ -81,7 +85,7 @@
 			<img src="images/img_shape1.png">
 		</div>
 		<section class="special special-area">
-			<h2 class="heading vision-area">
+			<h2 class="heading vision-area wow animated bounceInLeft">
 				<span>
 					〇〇〇のスペシャルコンテンツ
 				</span>
@@ -95,15 +99,15 @@
 					<img src="images/bg_background_04.png" alt="special background">
 					<img src="images/bg_background_05.png" alt="special background">
 				</div>
-				<div class="special-training">
+				<div class="special-training wow animated fadeInUp">
 					<span>
 						この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。この文章はダミーです。
 					</span>
-					<button class="special-button">〇〇〇 Styleの育成術</button>
+					<button class="cmm-button">〇〇〇 Styleの育成術</button>
 				</div>
 			</div>
 			<div class="special-set2">
-				<div class="special-set2__item">
+				<div class="special-set2__item wow animated fadeIn">
 					<img src="images/img_set2_01.png" alt="image set2 01">
 					<span>
 						データ・キーワードで見る〇〇〇
@@ -111,7 +115,7 @@
 					<a href="#link">
 					</a>
 				</div>
-				<div class="special-set2__item">
+				<div class="special-set2__item wow animated fadeIn" data-wow-delay=".2s">
 					<img src="images/img_set2_02.png" alt="image set2 02">
 					<span>
 						１年目社員のリアルボイス
@@ -119,7 +123,7 @@
 					<a href="#link">
 					</a>
 				</div>
-				<div class="special-set2__item">
+				<div class="special-set2__item wow animated fadeIn" data-wow-delay=".6s">
 					<img src="images/img_set2_03.png" alt="image set2 03">
 					<span>
 						プロジェクトストーリー
@@ -127,7 +131,7 @@
 					<a href="#link">
 					</a>
 				</div>
-				<div class="special-set2__item">
+				<div class="special-set2__item wow animated fadeIn" data-wow-delay=".4s">
 					<img src="images/img_set2_04.png" alt="image set2 04">
 					<span>
 						代表メッセージ
@@ -141,7 +145,7 @@
 	<!-- build:about -->
 		<section class="about about-area">
 			<div class="under-background"></div>
-			<h2 class="heading vision-area">
+			<h2 class="heading vision-area wow animated fadeInUp">
 				<span>
 					〇〇〇とは
 				</span>
@@ -149,33 +153,33 @@
 			</h2>
 			<div class="container">
 				<div class="about-box">
-					<div class="about-box__item">
+					<div class="about-box__item wow animated bounceInUp">
 						<div class="about-box__img">
 							<img src="images/img_about_01.jpg" alt="images about 01">
 						</div>
 						<h3>事業案内</h3>
-						<a href="#link"></a>
+						<a class="a-link" href="#link"></a>
 					</div>
-					<div class="about-box__item">
+					<div class="about-box__item wow animated bounceInUp" data-wow-delay=".4s">
 						<div class="about-box__img">
 							<img src="images/img_about_02.jpg" alt="images about 02">
 						</div>
 						<h3>経営理念</h3>
-						<a href="#link"></a>
+						<a class="a-link" href="#link"></a>
 					</div>
-					<div class="about-box__item">
+					<div class="about-box__item wow animated bounceInUp" data-wow-delay=".2s">
 						<div class="about-box__img">
 							<img src="images/img_about_03.jpg" alt="images about 03">
 						</div>
 						<h3>〇〇〇の独自性</h3>
-						<a href="#link"></a>
+						<a class="a-link" href="#link"></a>
 					</div>
-					<div class="about-box__item">
+					<div class="about-box__item wow animated bounceInUp" data-wow-delay=".6s">
 						<div class="about-box__img">
 							<img src="images/img_about_04.jpg" alt="images about 04">
 						</div>
 						<h3>会社概要</h3>
-						<a href="#link"></a>
+						<a class="a-link" href="#link"></a>
 					</div>
 				</div>
 			</div>
@@ -184,17 +188,17 @@
 	<!-- build:work & people -->
 		<section class="people people-area">
 			<div class="under-background"></div>
-			<h2 class="heading vision-area">
+			<h2 class="heading vision-area wow animated fadeInUp">
 				<span>
 					〇〇〇の人と環境
 				</span>
-				WORK & PEOPLE
+				WORK <small>&</small> PEOPLE
 			</h2>
 			<div class="container">
 				<div class="people-onview">
 					<div class="people-wrap">
 						<span>この文章はダミーです。この文章はダミーです。文字の大きさ、量、字間、行間等を確認るために入れています。この文章はダミーです。この文章はダミーです。</span>
-						<button>
+						<button class="cmm-button">
 							先輩社員インタビュー
 						</button>
 					</div>
@@ -267,19 +271,96 @@
 				</div>
 			</div>
 		</section>
+		<div class="house-touring">
+			<button class="cmm-button wow animated fadeInUp">
+				社内ツアー
+			</button>
+		</div>
 	<!-- /build:work & people -->
+	<!-- build:recruit -->
+		<section class="recruit">
+			<h2 class="heading vision-area wow animated fadeInUp">
+				<span>
+					〇〇〇の採用情報
+				</span>
+				RECRUIT
+			</h2>
+			<div class="recruit-container vision-area">
+				<div>
+					<button class="cmm-button wow animated fadeInLeft">
+						<p>募集要項・選考ステップ</p>
+						<p>福利厚生</p>
+					</button>
+					<button class="cmm-button wow animated fadeInLeft" data-wow-delay=".2s">
+						<p>インターンシップ情報</p>
+					</button>
+					<button class="cmm-button wow animated fadeInLeft" data-wow-delay=".4s">
+						<p>採用FAQ</p>
+					</button>
+				</div>
+			</div>
+		</section>
+	<!-- build:/recruit -->
 
 	<!-- /build:content -->
 	</main>
-	<footer>
+	<footer class="footer">
 	<!-- build:footer -->
-	<div style="height: 100px;">
-		
-	</div>
+		<div class="under-background"></div>
+		<div class="footer--container">
+			<div class="footer__menu">
+				<div class="footer__menu__item">
+					<h3 class="menu-title">menu</h3>
+					<ul>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+					</ul>
+				</div>
+				<div class="footer__menu__item">
+					<h3 class="menu-title">menu</h3>
+					<ul>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+					</ul>
+				</div>
+				<div class="footer__menu__item">
+					<h3 class="menu-title">menu</h3>
+					<ul>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						
+					</ul>
+				</div>
+				<div class="footer__menu__item">
+					<h3 class="menu-title">menu</h3>
+					<ul>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+						<li>メニュー <a class="a-link" href="#link"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__end-page">
+				<h1>logo <a class="a-link" href="#link"></a></h1>
+				<span>コーポレートサイトTOP</span>
+				<span>｜ </span>
+				<span>サイトマップ</span>
+				<span> ｜</span>
+				<span> プライバシーポリシー</span>
+				<span>(c)0000 SAMPLE Inc. All Rights Reserved.</span>
+			</div>
+		</div>
 	</footer>
+	<a href="#main-page" class="to-top-button animated bounceInUp"></a>
 	<script src="assets/js/jquery-2.2.4.min.js"></script>
 	<script src="assets/js/fontawesome.min.js"></script>
 	<script src="assets/plugins/slick/slick.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/mainjs.js"></script>
 	<!-- build:addJs -->
 </body>

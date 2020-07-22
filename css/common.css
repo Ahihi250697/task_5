@@ -7,6 +7,14 @@
     font-family: 'Lora', serif;
     font-family: 'Yumincho';
 ===========*/
+.a-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 .under-link {
   position: relative;
   width: 100%;
@@ -44,17 +52,143 @@
   width: 100%;
 }
 
+.cmm-button {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  outline: none;
+  text-align: left;
+  padding-left: 4rem;
+  transition: all 0.5s ease;
+}
+.cmm-button::after {
+  content: "";
+  width: 4rem;
+  height: 0.2rem;
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.cmm-button::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .cmm-button {
+    font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+}
+
+.vision-area {
+  width: 100%;
+  max-width: 116.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1200px) {
+  .vision-area {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .heading {
   font-family: "Lora", serif;
   font-size: 11rem;
   color: #1f1f1f;
+}
+@media screen and (max-width: 1024px) {
+  .heading {
+    font-size: 8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 4rem;
+    margin-top: 2rem;
+  }
 }
 .heading span {
   font-size: 2rem;
   color: #000;
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .heading span {
+    font-size: 1.4rem;
+  }
+}
+.heading small {
+  font-size: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .heading small {
+    font-size: 2.4rem;
+  }
+}
 
+.to-top-button {
+  position: fixed;
+  bottom: 50rem;
+  right: 8rem;
+  width: 6rem;
+  height: 6rem;
+  border: 0.2rem solid #1f1f1f;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: none;
+}
+.to-top-button::after, .to-top-button::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.to-top-button::after {
+  width: 2rem;
+  height: 2rem;
+  border-right: 0.2rem solid #1f1f1f;
+  border-top: 0.2rem solid #1f1f1f;
+  transform: rotate(-45deg);
+  top: 45%;
+  left: 30%;
+}
+.to-top-button::before {
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+  left: -100%;
+  z-index: 1;
+}
+.to-top-button:hover {
+  background-color: #2749a0;
+}
+.to-top-button:hover::after {
+  border-color: white;
+}
+.to-top-button:hover::before {
+  left: 150%;
+  background-color: white;
+}
+.to-top-button.active {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .to-top-button {
+    bottom: 4rem;
+    right: 1rem;
+  }
+}
+
+/*======
+    scrollbar
+    =======*/
 ::-webkit-scrollbar {
   width: 1rem;
   height: 1rem;

@@ -1,4 +1,4 @@
-.d-flex-center, .header-menu .header-button, .header-menu, .header {
+.d-flex-center, .header-wrap .header-button, .header-wrap, .header {
   display: flex;
   align-items: center;
 }
@@ -20,10 +20,17 @@
   margin: 0 auto;
   z-index: 1030;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    height: 6rem;
+    padding: 0 2rem;
+  }
+}
 .header-logo {
   width: 100%;
   max-width: 29.5rem;
   height: 4.5rem;
+  line-height: 4.5rem;
   position: relative;
   border: 0.1rem solid #2749a0;
   background-color: #2749a0;
@@ -33,33 +40,46 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  padding-top: 0.1rem;
   letter-spacing: 0.5rem;
   text-decoration: none;
   font-size: 4rem;
   font-weight: bold;
   color: white;
 }
-.header span:nth-of-type(1) {
+.header-logo + span {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: bold;
   color: #1f1f1f;
   margin-left: 2.5rem;
 }
-.header-menu {
+@media screen and (max-width: 768px) {
+  .header-logo {
+    max-width: 10.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .header-logo a {
+    font-size: 2.7rem;
+  }
+  .header-logo + span {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    margin-right: auto;
+  }
+}
+.header-wrap {
   margin-left: auto;
 }
-.header-menu h3 {
-  margin: 0 2.2rem;
+@media screen and (max-width: 768px) {
+  .header-wrap {
+    display: none;
+  }
+  .header-wrap.active {
+    display: flex;
+  }
 }
-.header-menu h3 a {
-  text-transform: uppercase;
-  color: #1f1f1f;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-.header-menu .header-button {
+.header-wrap .header-button {
   width: 100%;
   max-width: 12rem;
   height: 4rem;
@@ -71,11 +91,41 @@
   font-size: 1.4rem;
   font-weight: bold;
   margin: 0.5rem;
+  border: 0.1rem solid #005dbb;
   letter-spacing: 0.2rem;
+  transition: all 0.3s ease;
 }
-.header-menu .header-button i {
+.header-wrap .header-button i {
   margin-left: 0.2rem;
   font-size: 1.2rem;
+}
+.header-wrap .header-button:hover {
+  background-color: white;
+  color: #005dbb;
+}
+.header-wrap .header-button:hover::before, .header-wrap .header-button:hover::after {
+  border-color: #005dbb;
+}
+.header-menu {
+  display: flex;
+  margin-right: 2rem;
+}
+@media screen and (max-width: 1200px) {
+  .header-menu {
+    display: none;
+  }
+  .header-menu.active {
+    display: flex;
+  }
+}
+.header-menu h3 {
+  margin: 0 2.2rem;
+}
+.header-menu h3 a {
+  text-transform: uppercase;
+  color: #1f1f1f;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .btn-checked {
@@ -83,6 +133,7 @@
 }
 .btn-checked::after, .btn-checked::before {
   content: "";
+  transition: all 0.3s ease;
 }
 .btn-checked::after {
   width: 1.2rem;
@@ -104,12 +155,13 @@
 
 .hambuger-button {
   width: 4rem;
-  height: 4rem;
+  height: 3rem;
   position: relative;
   display: none;
   outline: none;
   border: none;
   background-color: transparent;
+  margin-left: 2rem;
 }
 .hambuger-button span {
   width: 100%;

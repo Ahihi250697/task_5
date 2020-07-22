@@ -5,6 +5,14 @@ $('.mv-slick').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplaySpeed: 2000,
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }]
+
 });
 $('.special-bg').slick({
 	dots: false,
@@ -31,5 +39,34 @@ $('.people-slick').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplaySpeed: 2000,
+	responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false
+      }
+    }]
 });
-
+var _totopIsOpen = 0;
+window.onscroll = function () {
+    var _curPos = window.pageYOffset;
+    if(_curPos > 300){
+    	if(_totopIsOpen == 0){
+    		_totopIsOpen = -1;
+        	$('.to-top-button').addClass('active');
+    	}
+    }
+    else {
+    	if(_totopIsOpen == -1){
+    		$('.to-top-button').removeClass('active');
+	        _totopIsOpen = 0;
+    	}
+        
+    }
+}
+$('.to-top-button').click(function (event) {
+    /* Act on the event */
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000, 'swing');
+});
