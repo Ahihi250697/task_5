@@ -535,6 +535,11 @@
   bottom: 0;
   z-index: -12;
 }
+@media screen and (max-width: 768px) {
+  .people-underview {
+    display: none;
+  }
+}
 .people-underview .slick-list {
   height: 100%;
 }

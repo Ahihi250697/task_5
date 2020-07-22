@@ -516,6 +516,9 @@
 		/* display: flex;*/
 		bottom: 0;
 		z-index: -12;
+		@include mobile{
+			display: none;
+		}
 		.slick-list{
 			height: 100%;
 			.slick-track{

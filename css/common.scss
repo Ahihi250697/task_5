@@ -29,6 +29,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 12;
         background-color: $c-main-color;
         transition: all .3s ease;
     }
@@ -129,7 +130,7 @@
     height: 6rem;
     border: .2rem solid $c-black2;
     overflow: hidden;
-    transition: all .3s ease;
+    // transition: all .3s ease;
     display: none;
     &::after, &::before{
         content: '';
