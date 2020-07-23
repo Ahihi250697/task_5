@@ -530,13 +530,24 @@
 		}
 		&__item{
 			height: 100%;
+			margin: 0 4rem;
 			// max-width: 100%;
 			// min-width: 25%;
+			position: relative;
 			@include mobile{
 				min-width: 0;
 			}
 			img{
 				height: 100%;
+			}
+			&.slick-current::after{
+				content:'';
+				top:50%;
+				left:0;
+				right:0;
+				bottom:0;
+				background-color: white;
+				position: absolute;
 			}
 		}
 		&::after{

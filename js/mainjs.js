@@ -58,7 +58,9 @@ $('.people-underview').slick({
     }]
 
 });
-
+$('.people-underview').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log(nextSlide);
+});
 var _totopIsOpen = 0;
 var _maxBottom = 500;
 

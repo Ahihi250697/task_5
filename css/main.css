@@ -548,6 +548,8 @@
 }
 .people-underview__item {
   height: 100%;
+  margin: 0 4rem;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .people-underview__item {
@@ -556,6 +558,15 @@
 }
 .people-underview__item img {
   height: 100%;
+}
+.people-underview__item.slick-current::after {
+  content: "";
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  position: absolute;
 }
 .people-underview::after {
   content: "";
