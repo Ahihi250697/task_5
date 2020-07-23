@@ -347,7 +347,7 @@
 		padding-top: 2rem;
 	}
 	.under-background{
-		max-height: 70rem;
+		max-height: 105rem;
 		-webkit-transform: rotate(-8deg);
 		    -ms-transform: rotate(-8deg);
 		        transform: rotate(-8deg);
@@ -513,12 +513,11 @@
 		position: absolute;
 		width: 100%;
 		height: 52rem;
-		/* display: flex;*/
 		bottom: 0;
 		z-index: -12;
-		@include mobile{
-			display: none;
-		}
+		// @include mobile{
+		// 	display: none;
+		// }
 		.slick-list{
 			height: 100%;
 			.slick-track{
@@ -527,8 +526,11 @@
 		}
 		&__item{
 			height: 100%;
-			max-width: 100%;
-			min-width: 25%;
+			// max-width: 100%;
+			// min-width: 25%;
+			@include mobile{
+				min-width: 0;
+			}
 			img{
 				height: 100%;
 			}
@@ -543,6 +545,9 @@
 			background-image: -webkit-gradient(linear, left top, right top, from(rgba($c-purple2, .8)), to(rgba($c-main-color, .8)));
 			background-image: -o-linear-gradient(left, rgba($c-purple2, .8), rgba($c-main-color, .8));
 			background-image: linear-gradient(to right, rgba($c-purple2, .8), rgba($c-main-color, .8));
+			@include mobile{
+				background-image: linear-gradient(to right, rgba($c-purple2, 1), rgba($c-main-color, 1));
+			}
 		}
 	}
 

@@ -360,7 +360,7 @@
   }
 }
 .about .under-background {
-  max-height: 70rem;
+  max-height: 105rem;
   -webkit-transform: rotate(-8deg);
   -ms-transform: rotate(-8deg);
   transform: rotate(-8deg);
@@ -531,14 +531,8 @@
   position: absolute;
   width: 100%;
   height: 52rem;
-  /* display: flex;*/
   bottom: 0;
   z-index: -12;
-}
-@media screen and (max-width: 768px) {
-  .people-underview {
-    display: none;
-  }
 }
 .people-underview .slick-list {
   height: 100%;
@@ -548,8 +542,11 @@
 }
 .people-underview__item {
   height: 100%;
-  max-width: 100%;
-  min-width: 25%;
+}
+@media screen and (max-width: 768px) {
+  .people-underview__item {
+    min-width: 0;
+  }
 }
 .people-underview__item img {
   height: 100%;
@@ -564,6 +561,11 @@
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(12, 12, 112, 0.8)), to(rgba(39, 73, 160, 0.8)));
   background-image: -o-linear-gradient(left, rgba(12, 12, 112, 0.8), rgba(39, 73, 160, 0.8));
   background-image: linear-gradient(to right, rgba(12, 12, 112, 0.8), rgba(39, 73, 160, 0.8));
+}
+@media screen and (max-width: 768px) {
+  .people-underview::after {
+    background-image: linear-gradient(to right, #0c0c70, #2749a0);
+  }
 }
 .people-wrap {
   width: 100%;

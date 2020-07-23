@@ -23,7 +23,7 @@
 }
 @media screen and (max-width: 768px) {
   .footer .under-background {
-    max-height: 85rem;
+    max-height: 93rem;
     width: 140%;
   }
 }
@@ -90,6 +90,11 @@
 .footer__end-page span:last-of-type {
   margin-left: auto;
 }
+@media screen and (max-width: 768px) {
+  .footer__end-page span:last-of-type {
+    margin-left: 0;
+  }
+}
 
 .footer__menu {
   width: 100%;
@@ -118,11 +123,19 @@
   color: #1f1f1f;
   text-transform: uppercase;
   font-family: "Lora", serif;
-  border-bottom: 0.1rem solid #ccc;
+  border-bottom: 0.2rem solid #ccc;
   padding-bottom: 1.2rem;
 }
 .footer__menu__item:not(:last-of-type) {
   margin-right: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .footer__menu__item {
+    margin-top: 2rem;
+  }
+  .footer__menu__item:not(:last-of-type) {
+    margin-right: 0rem;
+  }
 }
 .footer__menu__item ul {
   margin-top: 2.5rem;
