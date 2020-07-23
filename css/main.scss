@@ -206,6 +206,7 @@
 		right: 2rem;
 		bottom: 10rem;
 		@include mobile{
+			max-width: 100%;
 			position: relative;
 			bottom: 0;
 			right: 0;
@@ -266,6 +267,9 @@
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 		overflow: hidden;
+		@include mobile{
+			margin-top: 4rem;
+		}
 		&__item{
 			width: 100%;
 			max-width: 50%;
@@ -831,7 +835,8 @@
 				&:not(:last-of-type){
 					margin-right: 0rem;
 				}
-				height: 5rem;
+				height: 6rem;
+				max-width: 100%;
 				margin: 1rem 0;
 			}
 			&::after{

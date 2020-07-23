@@ -58,8 +58,18 @@ $('.people-underview').slick({
     }]
 
 });
+
 var _totopIsOpen = 0;
 var _maxBottom = 500;
+
+$(window).on('load resize', function() {
+    var _w = $(window).width();
+    if (_w <= 768) {
+        $('.people-underview').slick('unslick');
+        _maxBottom = 300;
+    }
+});
+
 window.onscroll = function() {
     var _curPos = window.pageYOffset;
     var _docHeight = $(document).height();
@@ -74,7 +84,7 @@ window.onscroll = function() {
             var _a = (_screen / _docHeight);
             var _b = _maxBottom - (_maxBottom - _maxBottom * _a);
             $('.to-top-button').css({
-                bottom: _b
+                bottom: _b+'px'
             });
         }
     } else {
@@ -202,11 +212,5 @@ $('.header-menu__list').click(function() {
                 height: 'toggle'
             }, 300, function() {});
         }
-    }
-});
-$(window).on('load resize', function() {
-    var _w = $(window).width();
-    if (_w <= 768) {
-        $('.people-underview').slick('unslick');
     }
 });
