@@ -125,7 +125,6 @@ $('.hambuger-button').click(function() {
                 next();
             });
         }
-
         _hamIsOpen = 1;
         $(this).addClass('active');
 
@@ -151,12 +150,12 @@ $('.header-menu__list').hover(
         var _w = $(window).width();
         if (_w > 1200) {
             var _l = $(this).find('.a-text-none').attr('href');
-            console.log(_l);
+
             if (_delayOpenLink == -1) {
                 $(_l).addClass('active').animate({
                     height: 'toggle'
                 }, 300, function() {
-                    console.log('add active');
+
                 });
                 _delayOpenLink = 0;
             }
@@ -171,7 +170,6 @@ $('.header-menu__list').hover(
                     $(_l).animate({
                         height: 'toggle'
                     }, 300, function() {
-                        console.log('rev active');
                     });
                     _delayOpenLink = -1;
                 }
