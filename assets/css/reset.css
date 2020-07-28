@@ -1,12 +1,11 @@
 @charset "UTF-8";
-
 /*
   Copyright J-LINE CORPORATION. All rights reserved.
   http://www.j-line.co.jp/
 */
 /* /////////////////////////////////////////////////////////////
 
-    リセット基準テーマ
+	リセット基準テーマ
 
 ///////////////////////////////////////////////////////////// */
 /* 
@@ -16,378 +15,262 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
-* {
-    box-sizing: border-box;
-}
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 nav ul {
-    list-style: none;
+  list-style: none;
 }
 
-blockquote,
-q {
-    quotes: none;
+blockquote, q {
+  quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
 a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    text-decoration: underline;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: underline;
 }
 
 /* change colours to suit your needs */
 ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
 }
 
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-abbr[title],
-dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
-input,
-select {
-    vertical-align: middle;
+input, select {
+  vertical-align: middle;
 }
 
 /* /////////////////////////////////////////////////////////////
 
-    ベーススタイル
+	ベーススタイル
 
 ///////////////////////////////////////////////////////////// */
 /* ----------------------------------------------------------
-    0. リセット & 追加要素の設定
+	0. リセット & 追加要素の設定
 ------------------------------------------------------------- */
-video,
-audio,
-canvas {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
+video, audio, canvas {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
 }
 
 audio:not([controls]) {
-    display: none;
+  display: none;
 }
 
 [hidden] {
-    display: none;
+  display: none;
 }
 
 /* ----------------------------------------------------------
-    1. ベース
+	1. ベース
 ------------------------------------------------------------- */
 html {
-    overflow-y: scroll;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
-    background: #fff;
-    color: #1f1f1f;
-    word-wrap: break-word;
-    font-family: "游ゴシック", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku 　Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
-    font-weight: 500;
-    font-size: 1.6rem;
-}
-
-body>main {
-    -ms-overflow-x: hidden;
-}
-
-@supports (-ms-ime-align: auto) {
-    body>main {
-        overflow: hidden;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1.4rem;
-    }
+  background: #fff;
+  color: #333;
+  word-wrap: break-word;
 }
 
 /* ----------------------------------------------------------
-    2. ブロック要素
+	2. ブロック要素
 ------------------------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: bold;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 ol {
-    list-style: decimal inside;
+  list-style: decimal inside;
 }
 
 pre {
-    font-family: monospace, serif;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+  font-family: monospace, serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 /* ----------------------------------------------------------
-    3. インライン要素
+	3. インライン要素
 ------------------------------------------------------------- */
 a:focus {
-    outline: thin dotted;
+  outline: thin dotted;
 }
 
-a:hover,
-a:active {
-    outline: 0;
+a:hover, a:active {
+  outline: 0;
 }
 
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* ----------------------------------------------------------
-    4. テキスト
+	4. テキスト
 ------------------------------------------------------------- */
-address,
-cite,
-em,
-dfn,
-i,
-var {
-    font-style: normal;
+address, cite, em, dfn, i, var {
+  font-style: normal;
 }
 
-strong,
-b {
-    font-weight: bold;
+strong, b {
+  font-weight: bold;
 }
 
-code,
-samp,
-kbd {
-    font-family: monospace, sans-serif;
+code, samp, kbd {
+  font-family: monospace, sans-serif;
 }
 
 abbr {
-    border: 0;
-    font-variant: normal;
+  border: 0;
+  font-variant: normal;
 }
 
-abbr[title],
-dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
 }
 
 sup {
-    vertical-align: text-top;
+  vertical-align: text-top;
 }
 
 sub {
-    vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
 
 br {
-    *letter-spacing: 0;
+  *letter-spacing: 0;
 }
 
 p {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 /* ----------------------------------------------------------
-    5. テーブル
+	5. テーブル
 ------------------------------------------------------------- */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-caption,
-th,
-td {
-    font-weight: normal;
-    text-align: left;
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
 }
 
 /* ----------------------------------------------------------
-    6. フォーム部品
+	6. フォーム部品
 ------------------------------------------------------------- */
-input,
-textarea,
-select {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    *font-size: 100%;
-    padding: 0;
+input, textarea, select {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  *font-size: 100%;
+  padding: 0;
 }
 
-input,
-button {
-    line-height: normal;
-    vertical-align: middle;
+input, button {
+  line-height: normal;
+  vertical-align: middle;
 }
 
 textarea {
-    overflow: auto;
-    vertical-align: top;
+  overflow: auto;
+  vertical-align: top;
 }
 
 select {
-    background-color: inherit;
-    line-height: normal;
+  background-color: inherit;
+  line-height: normal;
 }
 
 label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 legend {
-    color: #333;
-    *margin-left: -7px;
+  color: #333;
+  *margin-left: -7px;
 }
 
 

@@ -1,7 +1,4 @@
-/* @font-face {*/
-/*   font-family: Yumincho;*/
-/*   src: url("../assets/plugins/fonts/yumindb.ttf");*/
-/* }*/
+@charset "UTF-8";
 /*===========
 	font-family
 	font-family: 'Lora', serif;
@@ -120,6 +117,7 @@
   margin-top: 3rem;
   position: relative;
   padding: 0 4rem;
+  font-family: "游ゴシック", "Yu Gothic", sans-serif;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -208,7 +206,7 @@
   position: absolute;
   width: 100%;
   max-width: 40rem;
-  right: 2rem;
+  right: 1rem;
   bottom: 10rem;
 }
 @media screen and (max-width: 768px) {
@@ -397,7 +395,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   position: relative;
-  top: -3rem;
+  top: -3.8rem;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
@@ -561,7 +559,7 @@
 }
 .people-underview__item.slick-current::after {
   content: "";
-  top: 50%;
+  top: 0%;
   left: 0;
   right: 0;
   bottom: 0;
@@ -690,6 +688,7 @@
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  letter-spacing: 0.5rem;
 }
 @media screen and (max-width: 768px) {
   .people-slick .slick__item .top-right-text {
@@ -718,6 +717,7 @@
   left: 4rem;
 }
 .people-slick .slick__item .bottom-left-text p {
+  line-height: 2;
   font-size: 1.4rem;
   color: #1f1f1f;
   font-weight: bold;

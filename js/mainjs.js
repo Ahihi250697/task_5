@@ -51,6 +51,12 @@ $('.people-underview').slick({
     centerMode: true,
     asNavFor: '.people-slick',
     responsive: [{
+        breakpoint: 1500,
+        settings: {
+            slidesToShow: 3,
+        }
+    },
+    {
         breakpoint: 1200,
         settings: {
             slidesToShow: 2,
@@ -58,9 +64,7 @@ $('.people-underview').slick({
     }]
 
 });
-$('.people-underview').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  console.log(nextSlide);
-});
+
 var _totopIsOpen = 0;
 var _maxBottom = 500;
 

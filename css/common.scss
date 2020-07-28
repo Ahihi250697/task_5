@@ -6,13 +6,18 @@
   font-family: Yumincho;
   src: url("../assets/plugins/fonts/yumindb.ttf");
 }
+
+body {
+    // font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ ゴシック", sans-serif;
+}
 /*===========
     font-family
     font-family: 'Lora', serif;
     font-family: 'Yumincho';
 ===========*/
 .a-link{
-    position: absolute;
+    position: absolute !important;
     top: 0;
     bottom: 0;
     right: 0;

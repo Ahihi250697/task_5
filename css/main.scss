@@ -2,10 +2,10 @@
 @import 'functions_responsive.scss';
 @import 'assets/variables.scss';
 
-/* @font-face {*/
-/*   font-family: Yumincho;*/
-/*   src: url("../assets/plugins/fonts/yumindb.ttf");*/
-/* }*/
+//  @font-face {
+//   font-family: Yumincho;
+//   src: url("../assets/plugins/fonts/yumindb.ttf");
+// }
 
 /*===========
 	font-family
@@ -119,6 +119,7 @@
 			margin-top: 3rem;
 			position: relative;
 			padding: 0 4rem;
+			font-family: "游ゴシック", "Yu Gothic" ,sans-serif;
 			-webkit-transition: all .3s ease;
 			-o-transition: all .3s ease;
 			transition: all .3s ease;
@@ -203,7 +204,7 @@
 		position: absolute;
 		width: 100%;
 		max-width: 40rem;
-		right: 2rem;
+		right: 1rem;
 		bottom: 10rem;
 		@include mobile{
 			max-width: 100%;
@@ -383,7 +384,7 @@
 	    	-ms-flex-pack: justify;
 	        
 	position: relative;
-	top: -3rem;
+	top: -3.8rem;
 	flex-wrap: wrap;
 	@include mobile{
 		top: 0;
@@ -542,7 +543,7 @@
 			}
 			&.slick-current::after{
 				content:'';
-				top:50%;
+				top:0%;
 				left:0;
 				right:0;
 				bottom:0;
@@ -667,6 +668,7 @@
 			-webkit-box-align: start;
 			    -ms-flex-align: start;
 			        align-items: flex-start;
+			letter-spacing: .5rem;
 			@include mobile{
 				right: 1rem;
 				top: 2rem;
@@ -692,6 +694,7 @@
 			bottom: 4rem;
 			left: 4rem;
 			p{
+				line-height: 2;
 				font-size: 1.4rem;
 				color: $c-black2;
 				font-weight: bold;
